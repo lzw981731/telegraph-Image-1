@@ -213,7 +213,7 @@ function render_uploaded() {
     uploaded_files.forEach(function (x) {
         var resp = x.resp;
         var name = resp.data.url.split('/').pop();
-        const WPRAW = "https://i3.wp.com/telegra.ph"
+        const WPRAW = "https://i0.wp.com/telegra.ph"
         const PhRAW = "https://telegra.ph"
         var url = resp.data.thumb == null ? BASE_URL + resp.data.url : BASE_URL + resp.data.thumb.url;
         var wpurl = resp.data.thumb == null ? WPRAW + resp.data.url : WPRAW + resp.data.thumb.url;
