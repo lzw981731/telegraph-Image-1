@@ -215,7 +215,8 @@ function render_uploaded() {
         var name = resp.data.url.split('/').pop();
         const WPRAW = "https://i0.wp.com/telegra.ph"
         const PhRAW = "https://telegra.ph"
-        var url = resp.data.thumb == null ? BASE_URL + resp.data.url : BASE_URL + resp.data.thumb.url;
+        var url = resp.data.thumb == null ? "https://lzw981731.cachefly.net" + resp.data.url : "https://lzw981731.cachefly.net" + resp.data.thumb.url;
+//        var url = resp.data.thumb == null ? BASE_URL + resp.data.url : BASE_URL + resp.data.thumb.url;
         var wpurl = resp.data.thumb == null ? WPRAW + resp.data.url : WPRAW + resp.data.thumb.url;
         var RAW = resp.data.thumb == null ? PhRAW + resp.data.url : PhRAW + resp.data.thumb.url;
         $('#imagedetail').append(formatHtml({ url: url, code: url, wp: wpurl, raw: RAW }));
