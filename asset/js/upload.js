@@ -231,8 +231,7 @@ $smfile.on('fileuploaded', function (event, data, previewId, index) {
     var form = data.form, files = data.files, extra = data.extra, response = data.response, reader = data.reader;
     // console.log(files);
     if (response.error === undefined) {
-//        response = { data: { url: response[0].src } }
-        response = { data: { url: "https://i.981731.xyz" + response[0].src } }
+        response = { data: { url: response[0].src } }
         // console.log(response);
         uploaded_files.push({ index: index, resp: response });
         render_uploaded();
